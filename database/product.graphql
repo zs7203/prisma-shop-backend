@@ -1,0 +1,37 @@
+type Product {
+  id: ID! @unique
+  code: Int! @unique
+  brand: Brand
+  category: SubCategory! 
+  attributes: [ProductAttribute!]!
+  gallery: [ProductGallery!]!
+  specs: [ProductSpecification!]!
+  stock: [ProductStock!]!
+  comments: [Comment!]!
+  createdAt: DateTime! 
+  updatedAt: DateTime!
+  name: String!
+  product_sn: String! @default(value: "商品sn码")
+  keywords: String! @default(value: "商品关键字")
+  product_brief: String! @default(value: "商品概述")
+  product_desc: String! @default(value: "商品详述")
+  product_unit: String @default(value: "商品计数单位")
+  primary_pic_url: String! @default(value: "")
+  list_pic_url: String! @default(value: "")
+  promotion_desc: String! @default(value: "商品促销描述")
+  promotion_tag: String! @default(value: "商品促销标签")
+  product_number: Int! @default(value: "0")
+  sort_order: Int! @default(value: "100")
+  sell_volume: Int! @default(value: "0")
+  primary_product_id: Int @default(value: "0")
+  counter_price: Float! @default(value: "0.00")
+  extra_price: Float! @default(value: "0.00")
+  retail_price: Float! @default(value: "0.00")
+  unit_price: Float! @default(value: "0.00")
+  app_excluesive_price: Float @default(value: "0.00")
+  is_new: Boolean @default(value: "true")
+  is_on_sale: Boolean! @default(value: "false")
+  is_delete: Boolean @default(value: "false")
+  is_limited: Boolean @default(value: "false")
+  is_hot: Boolean @default(value: "false")
+}

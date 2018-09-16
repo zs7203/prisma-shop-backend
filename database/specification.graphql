@@ -1,0 +1,7 @@
+type Specification {
+  id: ID! @unique
+  code: Int! @unique
+  name: String!
+  sort_order: Int!
+  product_specs: [ProductSpecification!] !
+}

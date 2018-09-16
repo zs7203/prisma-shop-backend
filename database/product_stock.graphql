@@ -1,0 +1,10 @@
+type ProductStock {
+  id: ID! @unique
+  code: Int! @unique
+  product: Product!
+  type: String! 
+  spec: [ProductSpecification!]!
+  sn: String!
+  total: Int!
+  retail_price: Float!
+}

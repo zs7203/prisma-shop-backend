@@ -1,0 +1,12 @@
+type Comment {
+  id: ID! @unique
+  code: Int! @unique
+  type_id: Int!
+  product: Product
+  content: String!
+  createdAt: DateTime!
+  status: Int!
+  new_content: String!
+  author: User
+  comment_pics: [CommentPicture!]!
+}

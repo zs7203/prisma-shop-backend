@@ -1,0 +1,38 @@
+# the name for the service (will be part of the service's HTTP endpoint)
+service: prisma-demo
+
+# the cluster and stage the service is deployed to
+stage: ${env:PRISMA_STAGE}
+
+# to disable authentication:
+disableAuth: true
+secret: ${env:PRISMA_SECRET}
+
+# the file path pointing to your data model
+datamodel: 
+  # - datamodel.graphql
+  - brand.graphql
+  - category.graphql
+  - product.graphql
+  - product_attribute.graphql
+  - product_gallery.graphql
+  - product_stock.graphql
+  - channel.graphql
+  - ad.graphql
+  - ad_position.graphql
+  - topic.graphql
+  - user.graphql
+  - comment.graphql
+  - comment_picture.graphql
+  - policy.graphql
+  - attribute.graphql
+  - attribute_category.graphql
+  - specification.graphql
+  - product_specification.graphql
+  - cart.graphql
+
+# seed your service with initial data based on seed.graphql
+seed:
+  import: seed.graphql
+
+cluster: ${env:PRISMA_CLUSTER}

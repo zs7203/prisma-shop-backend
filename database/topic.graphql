@@ -1,0 +1,25 @@
+type Topic {
+  id: ID! @unique
+  code: Int! @unique
+  title: String! 
+  content: String! @default(value: "")
+  avatar: String! @default(value: "")
+  item_pic_url: String! @default(value: "")
+  subtitle: String! @default(value: "")
+  topic_category: TopicCategory!
+  price_info: Float! @default(value: "0.00")
+  read_count: Int! @default(value: "0")
+  scene_pic_url: String! @default(value: "")
+  topic_template_id: Int! @default(value: "0")
+  topic_tag_id: Int! @default(value: "0")
+  sort_order: Int! @default(value: "0")
+  is_show: Boolean! @default(value: "false")
+}
+
+type TopicCategory {
+  id: ID! @unique
+  code: Int! @unique
+  title: String!
+  pic_url: String!
+  topics: [Topic!]!
+}

@@ -1,0 +1,7 @@
+type AttributeCategory {
+  id: ID! @unique
+  code: Int! @unique
+  name: String!
+  enabled: Boolean!
+  attributes: [Attribute!]!
+}

@@ -1,0 +1,11 @@
+type Ad {
+  id: ID! @unique
+  ad_position: AdPosition!
+  media_type: Int! @default(value: "1")
+  name: String!
+  link: String!
+  image_url: String!
+  content: String! @default(value: "此处填写banner内容")
+  end_time: DateTime
+  enabled: Boolean! @default(value: "false")
+}

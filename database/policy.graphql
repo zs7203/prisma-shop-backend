@@ -1,0 +1,5 @@
+type Policy {
+  id: ID! @unique
+  question: String!
+  answer: String!
+}

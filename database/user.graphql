@@ -1,0 +1,17 @@
+type User {
+  id: ID! @unique
+  code: Int! @unique
+  cart: [Cart!]!
+  username: String!
+  password: String!
+  gender: Int!
+  birthday: Int!
+  createdAt: DateTime!
+  last_login_time: Int!
+  last_login_ip: String!
+  nickname: String!
+  mobile: String!
+  register_ip: String!
+  avatar: String!
+  weixin_openid: String!
+}

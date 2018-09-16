@@ -1,0 +1,7 @@
+type Channel {
+  id: ID! @unique
+  name: String! 
+  url: String!
+  icon_url: String!
+  sort_order: Int!
+}

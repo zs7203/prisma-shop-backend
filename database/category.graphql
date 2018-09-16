@@ -1,0 +1,38 @@
+type Category {
+  id: ID! @unique
+  code: Int! @unique
+  name: String! 
+  keywords: String! @default(value: "")
+  front_desc: String! @default(value: "")
+  sort_order: Int! @default(value: "50")
+  show_index: Int! @default(value: "0")
+  is_show: Boolean! @default(value: "false")
+  banner_url: String! @default(value: "")
+  icon_url: String! @default(value: "")
+  img_url: String! @default(value: "")
+  wap_banner_url: String! @default(value: "")
+  level: String! @default(value: "")
+  type: Int! @default(value: "0")
+  front_name: String! @default(value: "")
+  subs: [SubCategory!]!
+}
+
+type SubCategory {
+  id: ID! @unique
+  code: Int! @unique
+  name: String! 
+  keywords: String! @default(value: "")
+  front_desc: String! @default(value: "")
+  sort_order: Int! @default(value: "50")
+  show_index: Int! @default(value: "0")
+  is_show: Boolean! @default(value: "false")
+  banner_url: String! @default(value: "")
+  icon_url: String! @default(value: "")
+  img_url: String! @default(value: "")
+  wap_banner_url: String! @default(value: "")
+  level: String! @default(value: "")
+  type: Int! @default(value: "0")
+  front_name: String! @default(value: "")
+  parent: Category!
+  products: [Product!]!
+}

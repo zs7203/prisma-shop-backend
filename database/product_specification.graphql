@@ -1,0 +1,8 @@
+type ProductSpecification {
+  id: ID! @unique
+  code: Int! @unique
+  parent: Specification!
+  product: Product!
+  value: String!
+  pic_url: String
+}

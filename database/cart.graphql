@@ -1,0 +1,8 @@
+type Cart {
+  id: ID! @unique
+  user: User!
+  session_id: Int!
+  product_stock: ProductStock!
+  count: Int!
+  checked: Boolean! @default(value: "true")
+}

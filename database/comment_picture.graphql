@@ -1,0 +1,7 @@
+type CommentPicture{
+  id: ID! @unique
+  code: Int! @unique
+  comment: Comment!
+  pic_url: String!
+  sort_order: Int!
+}

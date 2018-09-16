@@ -1,0 +1,15 @@
+type Brand {
+  id: ID! @unique
+  code: Int! @unique
+  name: String! 
+  list_pic_url: String! @default(value: "My New Post")
+  simple_desc: String! @default(value: "品牌概述")
+  pic_url: String! @default(value: "")
+  app_list_pic_url: String
+  new_pic_url: String
+  sort_order: Int @default(value: "1")
+  new_sort_order: Int @default(value: "1")
+  floor_price: Float! @default(value: "0.00")
+  is_show: Boolean! @default(value: "false")
+  is_new: Boolean @default(value: "false")
+}

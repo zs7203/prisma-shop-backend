@@ -1,0 +1,9 @@
+type AdPosition {
+  id: ID! @unique
+  type: Int! @unique
+  name: String! 
+  width: Int! @default(value: "666") 
+  height: Int! @default(value: "666")
+  desc: String @default(value: "此处填写描述")
+  ads: [Ad!]!
+}

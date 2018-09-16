@@ -1,0 +1,7 @@
+type ProductAttribute {
+  id: ID! @unique
+  code: Int! @unique
+  product: Product!
+  parent: Attribute!
+  value: String!
+}

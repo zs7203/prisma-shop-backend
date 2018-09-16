@@ -1,0 +1,8 @@
+type ProductGallery {
+  id: ID! @unique
+  code: Int! @unique
+  product: Product!
+  img_url: String!
+  img_desc: String!
+  sort_order: Int!
+}

@@ -1,0 +1,9 @@
+type Attribute {
+  id: ID! @unique
+  code: Int! @unique
+  name: String!
+  input_type: Int!
+  values: String! @default(value:"")
+  sort_order: Int! @default(value:"0")
+  category: AttributeCategory!
+}
